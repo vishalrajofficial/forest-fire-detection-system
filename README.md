@@ -40,3 +40,7 @@ In the future, we plan to improve the model's accuracy by incorporating more env
 
 - Vishal Raj
 - Vedant Shinde
+
+## Website Link
+
+[Forest Fire Detection](http://vedantshinde.pythonanywhere.com/)
