@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forest Fire Detection</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+
+    body {
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #4d4d4d;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      place-items: center;
+      overflow: hidden;
+      font-family: poppins;
+    }
+
+    .container {
+      top: 55px;
+      position: relative;
+      width: 400px;
+      height: 570px;
+      /* border-radius: 5px; */
+      padding: 20px;
+      box-sizing: border-box;
+      /* background: #ecf0f3; */
+      /* box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white; */
+    }
+
+    .brand-logo {
+      height: 100px;
+      width: 100px;
+      background: url("../static/fire.png");
+      margin: auto;
+      background-size: contain;
+      border-radius: 50%;
+      box-sizing: border-box;
+      box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+    }
+
+    .brand-title {
+      margin: 14px;
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: #81b956;
+      letter-spacing: 1px;
+    }
+
+    .inputs {
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    label,
+    input,
+    button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    label {
+      margin-bottom: 4px;
+    }
+
+    label:nth-of-type(2) {
+      margin-top: 12px;
+    }
+
+    input::placeholder {
+      color: gray;
+    }
+
+    .input {
+      background: #ecf0f3;
+      padding: 5px;
+      padding-left: 15px;
+      height: 50px;
+      font-size: 20px;
+      border-radius: 5px;
+      box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    }
+
+    .input:hover {
+      background-color: #81b956;
+    }
+
+    .if:hover {
+      background-color: #81b956;
+    }
+
+    button {
+      color: white;
+      margin-top: 20px;
+      background: #81b956;
+      height: 40px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 900;
+      /* box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white; */
+      transition: 0.5s;
+      font-size: 20px;
+    }
+
+    button:hover {
+      background: white;
+      color: #1da1f2;
+      border-radius: 10px;
+      transition: ease 0.5s;
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="brand-logo"></div>
+    <div class="brand-title">Forest Fire Detection</div>
+    <div class="inputs">
+      <form action="{{url_for('predict')}}" method="post" enctype="multipart/form-data">
+        <h4>Upload a CSV file:</h4>
+        <input type="file" name="file" class="if" />
+        <button class="" type="submit">Predict</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
